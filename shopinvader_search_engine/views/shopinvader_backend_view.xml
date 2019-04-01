@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="shopinvader_backend_view_form" model="ir.ui.view">
+        <field name="model">shopinvader.backend</field>
+        <field name="inherit_id"
+               ref="shopinvader.shopinvader_backend_view_form"/>
+        <field name="arch" type="xml">
+            <page name="search_eng" position="inside">
+                <field name="se_backend_id"/>
+            </page>
+            <page name="developper" position="inside">
+                <group name="indexes" string="Search engined indexes" col="10" colspan="4">
+                    <button
+                            name="force_recompute_all_binding_index"
+                            string="Recompute"
+                            type="object"/>
+                    <button
+                            name="force_batch_export_index"
+                            string="Export"
+                            type="object"/>
+                    <button
+                            name="clear_index"
+                            string="Clear"
+                            type="object"/>
+                </group>
+            </page>
+        </field>
+    </record>
+
+</odoo>
